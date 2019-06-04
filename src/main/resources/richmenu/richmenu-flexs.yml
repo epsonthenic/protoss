@@ -1,0 +1,51 @@
+size:
+  width: 2500
+  height: 1686
+selected: true
+name: Flex Message
+chatBarText: Flex Menu
+
+areas:
+  - bounds:
+      x: 0
+      y: 0
+      width: 1250
+      height: 843
+    action:
+      type: message
+      label: Restaurant
+      text: 'เรียกพนักงาน'
+
+  - bounds:
+      x: 1250
+      y: 0
+      width: 1250
+      height: 843
+    action:
+      type: message
+      label: catalogue
+      text: 'เรียกเมนู'
+
+  - bounds:
+      x: 0
+      y: 843
+      width: 1250
+      height: 843
+    action:
+      type: message
+      label: receipt
+      text: 'เก็บตัง'
+
+  - bounds:
+      x: 1250
+      y: 843
+      width: 1250
+      height: 843
+    action:
+      type: message
+      label: News
+      text: 'ดูคิว'
+#      type: uri
+#      label: Maun
+#      uri: line://app/1632583510-Wl5wmB6D
+

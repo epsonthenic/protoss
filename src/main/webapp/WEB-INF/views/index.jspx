@@ -1,0 +1,80 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:component="urn:jsptagdir:/WEB-INF/tags/component"
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+     xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
+     xmlns:form="http://www.springframework.org/tags/form"
+     version="2.0">
+    <spring:url value="/resources/scripts/adduser/lood.js" var="autoNumeric_js"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+
+    <spring:url value="/resources/scripts/appUser/load.js" var="load_js_url"/>
+
+
+    <!--<div class="row m">-->
+    <div class="col-xs-12" style="margin: 20px">
+        <div class="form-inline text-center-1">
+            <h5>Enter Code: </h5>
+            <input style="width:30vh;margin-left: 20px" type="password" class="form-control" id="myPsw"
+                   placeholder="1-4"/>
+            <!--<br/>-->
+
+        </div>
+        <div style="margin: 20px">
+            <span id="pass" style="color: red;display: none"> รหัสผิด </span>
+        </div>
+        <div class="col-xs-12 text-center" style="margin-top: 20px">
+            <button type="submit" id="sendmessagebutton" class="btn btn-default">OK</button>
+        </div>
+        <!--</div>-->
+    </div>
+    <!--<p id="demo"></p>-->
+    <!--<p id="ind"></p>-->
+
+
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <!--<script src="liff-starter.js"></script>-->
+    <script src="${load_js_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+    <script>
+        $('#sendmessagebutton').click(function () {
+            if ($('#myPsw').val() == '1234') {
+                liff.sendMessages([{
+                    type: 'text',
+                    text: "Flex"
+                }
+                ]).then(function () {
+                    window.alert("Message sent");
+                }).catch(function (error) {
+                    window.alert("Error sending message: " + error);
+                });
+                liff.closeWindow();
+            } else {
+                $('#pass').show();
+            }
+        });
+
+        // document.getElementById('sendmessagebutton').addEventListener('click', function () {
+        //     liff.sendMessages([{
+        //         type: 'text',
+        //         text: "Flex"
+        //     }
+        //     ]).then(function () {
+        //         window.alert("Message sent");
+        //     }).catch(function (error) {
+        //         window.alert("Error sending message: " + error);
+        //     });
+        //     liff.closeWindow();
+        // });
+    </script>
+
+
+    <!--<script>-->
+    <!--function myFunction() {-->
+    <!--var x = document.getElementById("myPsw").value;-->
+    <!--if(x == 1234){-->
+    <!--document.getElementById("ind").innerHTML = x;-->
+    <!--}-->
+    <!--document.getElementById("demo").innerHTML = x;-->
+    <!--liff.closeWindow();-->
+    <!--}-->
+    <!--</script>-->
+</div>

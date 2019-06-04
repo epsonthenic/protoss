@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="line-bot-cli-2.6.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/linecorp/bot/line-bot-cli/2.6.0/line-bot-cli-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

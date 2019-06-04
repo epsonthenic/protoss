@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="line-bot-servlet-2.3.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/linecorp/bot/line-bot-servlet/2.3.0/line-bot-servlet-2.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,33 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
+          version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <!-- Load CSS -->
+    <spring:url value="/resources/styles/bootstrap.min.css" var="bootstrap_css_url"/>
+    <spring:url value="/resources/styles/bootstrap-grid.min.css" var="bootstrap_grid_css_url"/>
+    <spring:url value="/resources/styles/bootstrap-reboot.min.css" var="bootstrap_reboot_css_url"/>
+    <spring:url value="/resources/styles/materialize.min.css" var="materialize_css_url"/>
+    <spring:url value="/resources/styles/font-awesome.min.css" var="fontAwesome_css_url"/>
+    <!--<spring:url value="/resources/styles/font-awesome.min.css" var="fontAwesome_css_url" />-->
+    <link rel="stylesheet" type="text/css" href="${bootstrap_css_url}"/>
+    <link rel="stylesheet" type="text/css" href="${bootstrap_grid_css_url}"/>
+    <link rel="stylesheet" type="text/css" href="${bootstrap_reboot_css_url}"/>
+    <!--<link rel="stylesheet" type="text/css" href="${materialize_css_url}" />-->
+    <link rel="stylesheet" type="text/css" href="${fontAwesome_css_url}"/>
+    <!-- Load JS -->
+    <spring:url value="/resources/scripts/jquery-3.3.1.min.js" var="jquery_js_url"/>
+    <spring:url value="/resources/scripts/bootstrap.min.js" var="bootstrap_js_url"/>
+    <spring:url value="/resources/scripts/bootstrap.bundle.min.js" var="bootstrap_bundle_js_url"/>
+    <spring:url value="/resources/scripts/materialize.min.js" var="materialize_js"/>
+    <spring:url value="/resources/scripts/autoNumeric.js" var="autoNumeric_js"/>
+    <script src="${jquery_js_url}" type="text/javascript">
+        <!-- required for FF3 and Opera -->
+    </script>
+    <script src="${bootstrap_js_url}" type="text/javascript">
+        <!-- required for FF3 and Opera --></script>
+    <script src="${bootstrap_bundle_js_url}" type="text/javascript">
+        <!-- required for FF3 and Opera -->
+    </script>
+    <!--<script src="${materialize_js}" type="text/javascript">&lt;!&ndash; required for FF3 and Opera &ndash;&gt;</script>-->
+    <script src="${autoNumeric_js}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+</jsp:root>
