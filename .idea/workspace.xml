@@ -2,69 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69f0847e-04ec-4273-9738-cc4d6bf35f3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/ConstantVariable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/controller/AppUserViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/entity/LineData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/entity/MasterData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/entity/MasterDataDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/flex/CatalogueFlexMessageSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/repository/LineDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/spring/ApplicationConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/utils/ReportParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/THSarabunNew.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/comic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/comicbd.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/fonts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/ipaexg/ipaexg.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/ipaexm/ipaexm.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jasperreports_extension.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/car_list.jasper" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/car_list.jrxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/richmenu/Home (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/richmenu/Newmenu_optimized.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/richmenu/home.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/default.jspx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/layouts/layouts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/liff-starter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/util/load-scripts.tagx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jspx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts/adduser/lood.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts/autoNumeric.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/scripts/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/styles/materialize.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LineLIFF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/LineBotConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotConfigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/LineBotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/controller/AppMailDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/controller/AppMailDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/entity/MasterData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/entity/MasterDataDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/flex/CatalogueFlexMessageSupplier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/flex/NewsFlexMessageSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/flex/NewsFlexMessageSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/flex/ReceiptFlexMessageSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/flex/ReceiptFlexMessageSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/flex/RestaurantFlexMessageSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/flex/RestaurantFlexMessageSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/flex/RestaurantMenuFlexMessageSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/flex/RestaurantMenuFlexMessageSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/flex/TicketFlexMessageSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/flex/TicketFlexMessageSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/helper/RichMenuHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/helper/RichMenuHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/repository/MasterDataDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/repository/MasterDataDetailRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/repository/MasterDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/repository/MasterDataRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/service/AppMailDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/service/AppMailDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/service/AppMailServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/service/AppMailServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/richmenu/richmenu-flexs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/richmenu/richmenu-flexs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/controller/AppMailDataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="120">
               <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -129,19 +67,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="210" column="39" selection-start-line="210" selection-start-column="39" selection-end-line="210" selection-end-column="39" />
+            <state relative-caret-position="255">
+              <caret line="185" column="43" selection-start-line="185" selection-start-column="43" selection-end-line="185" selection-end-column="43" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#handleStickerMessage#0;class#LineBotController#0" />
+                <element signature="method#handleLocationMessage#0;class#LineBotController#0" />
+                <element signature="method#handleImageMessage#0;class#LineBotController#0" />
+                <element signature="method#handleBeaconEvent#0;class#LineBotController#0" />
+                <element signature="method#handlememberJoined#0;class#LineBotController#0" />
+                <element signature="method#handleJoined#0;class#LineBotController#0" />
+                <element signature="method#saveContent#0;class#LineBotController#0" />
+                <element signature="method#createUri#0;class#LineBotController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -157,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="32" />
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -165,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/helper/RichMenuHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1175">
+            <state relative-caret-position="1245">
               <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
             </state>
           </provider>
@@ -183,7 +128,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/spring/ApplicationConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-140">
+            <state relative-caret-position="135">
               <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
             </state>
           </provider>
@@ -192,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/service/AppMailServiceImp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="1170">
               <caret line="87" selection-start-line="87" selection-end-line="87" />
             </state>
           </provider>
@@ -291,9 +236,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/iphayao/linebot/Application.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/protoss/linebot/service/AppMailServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/protoss/linebot/controller/AppUserViewController.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java" />
       </list>
     </option>
   </component>
@@ -368,6 +313,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="linebot" type="462c0819:PsiDirectoryNode" />
               <item name="flex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="line-bot-spring-boot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="protoss" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="linebot" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="line-bot-spring-boot" type="b2602c69:ProjectViewProjectNode" />
@@ -475,53 +429,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="protoss" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="protoss" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="protoss" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.iphayao.linebot.Application" />
@@ -570,11 +477,12 @@
       <workItem from="1559358700530" duration="775000" />
       <workItem from="1559611479224" duration="1374000" />
       <workItem from="1559613136979" duration="3030000" />
+      <workItem from="1561012208085" duration="2397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138363000" />
+    <option name="totallyTimeSpent" value="140760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,7 +497,7 @@
     <frame x="39" y="-4" width="1327" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24043716" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24434036" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -605,7 +513,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32868218" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960968" visible="true" weight="0.18139535" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49960968" visible="true" weight="0.27751938" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003903" side_tool="true" weight="0.32868218" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -776,34 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/helper/RichMenuHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/ConstantVariable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/spring/ApplicationConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/service/AppMailServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/javajdk/jdk1.8.0_202/src.zip!/java/lang/RuntimeException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -829,16 +709,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/protoss.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="32" />
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/controller/AppMailDataController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="120">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -853,20 +733,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protoss.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        <state relative-caret-position="45">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/helper/RichMenuHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="210" column="39" selection-start-line="210" selection-start-column="39" selection-end-line="210" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1245">
+          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/ConstantVariable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/spring/ApplicationConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/service/AppMailServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
@@ -877,6 +775,23 @@
             <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/protoss/linebot/LineBotController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="185" column="43" selection-start-line="185" selection-start-column="43" selection-end-line="185" selection-end-column="43" />
+          <folding>
+            <element signature="method#handleStickerMessage#0;class#LineBotController#0" />
+            <element signature="method#handleLocationMessage#0;class#LineBotController#0" />
+            <element signature="method#handleImageMessage#0;class#LineBotController#0" />
+            <element signature="method#handleBeaconEvent#0;class#LineBotController#0" />
+            <element signature="method#handlememberJoined#0;class#LineBotController#0" />
+            <element signature="method#handleJoined#0;class#LineBotController#0" />
+            <element signature="method#saveContent#0;class#LineBotController#0" />
+            <element signature="method#createUri#0;class#LineBotController#0" />
+          </folding>
         </state>
       </provider>
     </entry>

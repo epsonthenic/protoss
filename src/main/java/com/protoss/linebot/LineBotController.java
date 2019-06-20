@@ -39,6 +39,7 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.LocalTime;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 
@@ -177,88 +178,96 @@ public class LineBotController {
         String text = content.getText();
         String userId = event.getSource().getUserId();
         LOGGER.info("dssd", event.getSource().toString());
-        switch (text) {
-            case "Flex": {
-                String pathImageFlex = new ClassPathResource("richmenu/Newmenu_optimized.jpg").getFile().getAbsolutePath();
-                String pathConfigFlex = new ClassPathResource("richmenu/richmenu-flexs.yml").getFile().getAbsolutePath();
-                RichMenuHelper.createRichMenu(lineMessagingClient, pathConfigFlex, pathImageFlex, userId);
+        LocalTime time = LocalTime.now();
+        int listHour = time.getHour();
+        int listMinute = time.getMinute();
+
+//        if(listHour >= 6 && (listHour <= 17 && listMinute <= 60)){
+        if(listHour >= 6 && (listHour <= 13 && listMinute <= 60)){
+                switch (text) {
+                    case "Flex": {
+                        String pathImageFlex = new ClassPathResource("richmenu/Newmenu_optimized.jpg").getFile().getAbsolutePath();
+                        String pathConfigFlex = new ClassPathResource("richmenu/richmenu-flexs.yml").getFile().getAbsolutePath();
+                        RichMenuHelper.createRichMenu(lineMessagingClient, pathConfigFlex, pathImageFlex, userId);
 //                lineMessagingClient.getProfile(userId)
 //                        .whenComplete((profile, throwable) -> {
 //                            LOGGER.info("Flex{}",usid);
 //                            usid = profile.getUserId();
 ////                            lineDataRepository.save(new LineData(profile.getUserId()));
 //                        });
-                break;
-            }
-            case "เก็บตัง": {
-                RichMenuHelper.deleteRichMenu(lineMessagingClient, userId);
-                break;
-            }
-            case "เรียกพนักงาน": {
-                this.reply(replyToken, new RestaurantFlexMessageSupplier().get());
-                break;
-            }
-            case "หน้าหลัก": {
-                this.reply(replyToken, new RestaurantMenuFlexMessageSupplier().get());
-                break;
-            }
-//            case "เก็บตัง": {
-//                this.reply(replyToken, new ReceiptFlexMessageSupplier().get());
-//                break;
-//            }
-            case "ดูคิว": {
-                LOGGER.info("UserId message{}", userId);
-                generateReport(userId);
-                getJpgImge();
-                Path tempFile = Application.downloadedContentDir.resolve("imgpdf" + i + "-0.jpg");
-                DownloadedContent jpg = new DownloadedContent(tempFile, createUri("/downloaded/" + tempFile.getFileName()));
-                    this.reply(replyToken, Arrays.asList(
-                            new ImageMessage(jpg.getUri(), jpg.getUri())
-                    ));
-                break;
-            }
-            case "Ticket": {
-                this.reply(replyToken, new TicketFlexMessageSupplier().get());
-                break;
-            }
-            case "เรียกเมนู": {
-                this.reply(replyToken, new CatalogueFlexMessageSupplier().get());
-                break;
-            }
-            default:
-                String pathImageFlex = new ClassPathResource("richmenu/home.yml").getFile().getAbsolutePath();
-                String pathConfigFlex = new ClassPathResource("richmenu/richmenu-flexs.yml").getFile().getAbsolutePath();
-                RichMenuHelper.createRichMenu(lineMessagingClient, pathConfigFlex, pathImageFlex, userId);
-                boolean hasText = text.contains("@");
-                boolean hasText3 = text.contains("ขอเข้ากลุ่ม");
-                if (hasText3 == true) {
-                    reply(replyToken, Arrays.asList(
-                            new TextMessage("https://line.me/R/ti/g/vYYHUCuMG_")
-                    ));
-                } else if ((AppMailServiceImp.checkTextMatches(text) == true) && (hasText == false)) {
-                    if (userId != null) {
-                        lineMessagingClient.getProfile(userId)
-                                .whenComplete((profile, throwable) -> {
-                                    if (throwable != null) {
-                                        this.replyText(replyToken, throwable.getMessage());
-                                        return;
-                                    }
-                                    this.reply(replyToken, Arrays.asList(
-                                            new TextMessage("มี keyword ไม่มี @"),
-                                            new TextMessage("ชื่อคุณคือ: " + profile.getDisplayName()),
-                                            new TextMessage("ID คุณคือ: " + profile.getUserId())
-                                    ));
-                                });
+                        break;
                     }
-                } else if ((hasText == true) && (AppMailServiceImp.checkTextMatches(text) == true)) {
-                    if (userId != null) {
-                        reply(replyToken, Arrays.asList(
-                                new TextMessage("มี keyword และมี @"),
-                                new TextMessage(text)
+                    case "เก็บตัง": {
+                        RichMenuHelper.deleteRichMenu(lineMessagingClient, userId);
+                        break;
+                    }
+                    case "เรียกพนักงาน": {
+                        this.reply(replyToken, new RestaurantFlexMessageSupplier().get());
+                        break;
+                    }
+                    case "หน้าหลัก": {
+                        this.reply(replyToken, new RestaurantMenuFlexMessageSupplier().get());
+                        break;
+                    }
+                    case "ดูคิว": {
+                        LOGGER.info("UserId message{}", userId);
+                        generateReport(userId);
+                        getJpgImge();
+                        Path tempFile = Application.downloadedContentDir.resolve("imgpdf" + i + "-0.jpg");
+                        DownloadedContent jpg = new DownloadedContent(tempFile, createUri("/downloaded/" + tempFile.getFileName()));
+                        this.reply(replyToken, Arrays.asList(
+                                new ImageMessage(jpg.getUri(), jpg.getUri())
                         ));
+                        break;
                     }
+                    case "Ticket": {
+                        this.reply(replyToken, new TicketFlexMessageSupplier().get());
+                        break;
+                    }
+                    case "เรียกเมนู": {
+                        this.reply(replyToken, new CatalogueFlexMessageSupplier().get());
+                        break;
+                    }
+                    default:
+                        String pathImageFlex = new ClassPathResource("richmenu/home.yml").getFile().getAbsolutePath();
+                        String pathConfigFlex = new ClassPathResource("richmenu/richmenu-flexs.yml").getFile().getAbsolutePath();
+                        RichMenuHelper.createRichMenu(lineMessagingClient, pathConfigFlex, pathImageFlex, userId);
+                        boolean hasText = text.contains("@");
+                        boolean hasText3 = text.contains("ขอเข้ากลุ่ม");
+                        if (hasText3 == true) {
+                            reply(replyToken, Arrays.asList(
+                                    new TextMessage("https://line.me/R/ti/g/vYYHUCuMG_")
+                            ));
+                        } else if ((AppMailServiceImp.checkTextMatches(text) == true) && (hasText == false)) {
+                            if (userId != null) {
+                                lineMessagingClient.getProfile(userId)
+                                        .whenComplete((profile, throwable) -> {
+                                            if (throwable != null) {
+                                                this.replyText(replyToken, throwable.getMessage());
+                                                return;
+                                            }
+                                            this.reply(replyToken, Arrays.asList(
+                                                    new TextMessage("มี keyword ไม่มี @"),
+                                                    new TextMessage("ชื่อคุณคือ: " + profile.getDisplayName()),
+                                                    new TextMessage("ID คุณคือ: " + profile.getUserId())
+                                            ));
+                                        });
+                            }
+                        } else if ((hasText == true) && (AppMailServiceImp.checkTextMatches(text) == true)) {
+                            if (userId != null) {
+                                reply(replyToken, Arrays.asList(
+                                        new TextMessage("มี keyword และมี @"),
+                                        new TextMessage(text)
+                                ));
+                            }
+                        }
                 }
+        }else{
+            RichMenuHelper.deleteRichMenu(lineMessagingClient, userId);
+            reply(replyToken, Arrays.asList(new TextMessage("ไม่ได้อยู่ในช่วงเวลา")));
+            LOGGER.info("NOTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
         }
+
     }
 
     private static DownloadedContent saveContent(String ext, MessageContentResponse response) {
