@@ -182,8 +182,8 @@ public class LineBotController {
         int listHour = time.getHour();
         int listMinute = time.getMinute();
 
-//        if(listHour >= 6 && (listHour <= 17 && listMinute <= 60)){
-        if(listHour >= 6 && (listHour <= 13 && listMinute <= 60)){
+        if(listHour >= 6 && (listHour <= 17 && listMinute <= 60)){
+//        if(listHour >= 6 && (listHour <= 13 && listMinute <= 60)){
                 switch (text) {
                     case "Flex": {
                         String pathImageFlex = new ClassPathResource("richmenu/Newmenu_optimized.jpg").getFile().getAbsolutePath();
@@ -265,7 +265,6 @@ public class LineBotController {
         }else{
             RichMenuHelper.deleteRichMenu(lineMessagingClient, userId);
             reply(replyToken, Arrays.asList(new TextMessage("ไม่ได้อยู่ในช่วงเวลา")));
-            LOGGER.info("NOTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
         }
 
     }

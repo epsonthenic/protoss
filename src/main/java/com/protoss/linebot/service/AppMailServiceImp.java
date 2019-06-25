@@ -1,7 +1,9 @@
 package com.protoss.linebot.service;
 
 
+import com.protoss.linebot.entity.LineData;
 import com.protoss.linebot.entity.MasterDataDetail;
+import com.protoss.linebot.repository.LineDataRepository;
 import com.protoss.linebot.repository.MasterDataDetailRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,10 +20,18 @@ public class AppMailServiceImp implements AppMailDataService {
     @Autowired
     private MasterDataDetailRepository masterDataDetailRepository;
 
+    @Autowired
+    private LineDataRepository lineDataRepository;
+
     public static List<String> LIST_KEYWORD = new ArrayList<>();
     public static List<String> LIST_PROGRAM = new ArrayList<>();
 
     private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+
+    @Override
+    public List<LineData> getUserId() {
+        return lineDataRepository.findAll();
+    }
 
     @Override
     public List<MasterDataDetail> masterDatakey(Long id, String code) {
