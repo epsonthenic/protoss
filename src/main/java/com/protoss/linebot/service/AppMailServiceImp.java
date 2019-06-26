@@ -1,6 +1,8 @@
 package com.protoss.linebot.service;
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.protoss.linebot.entity.LineData;
 import com.protoss.linebot.entity.MasterDataDetail;
 import com.protoss.linebot.repository.LineDataRepository;
@@ -31,6 +33,45 @@ public class AppMailServiceImp implements AppMailDataService {
     @Override
     public List<LineData> getUserId() {
         return lineDataRepository.findAll();
+    }
+
+
+    @Override
+    public void SaveByJsonCus(String json) {
+        Gson gson = new Gson();
+        GsonBuilder gsonBuilder = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd HH:mm:ss");//ตั้ง gson format เพื่อ save ข้อมูลลง database
+
+        LOGGER.info("Json : {}",json);
+        LineData lineData = gsonBuilder.create().fromJson(json, LineData.class);
+
+        lineDataRepository.save(lineData);
+        LOGGER.info("Save By Json : {}",lineData.getId());
+    }
+
+//    @Override
+//    public ResponseEntity<String> appby(String tableId) {
+//        RestTemplate restTemplate = new RestTemplate();
+//        String url = "http://localhost:8083/RCD".concat("/Dashboard/savebyTable");
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
+//        UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url).queryParam(tableId);
+//        HttpEntity<String> entity = new HttpEntity<String>("", headers);
+//        LOGGER.info("request :{}", url);
+//        try {
+//            return restTemplate.exchange(builder.toUriString(), HttpMethod.POST, entity, String.class);
+//        } catch (Exception e) {
+//            LOGGER.error("{}", e.getMessage());
+//            e.printStackTrace();
+//            throw new RuntimeException(e);
+//        }
+//    }
+
+    @Override
+    public void SaveByTableId(String tableId) {
+        LineData lineData = new LineData();
+        lineData.setTableId(tableId);
+        lineDataRepository.save(lineData);
     }
 
     @Override

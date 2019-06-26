@@ -14,6 +14,7 @@ import com.linecorp.bot.model.message.*;
 import com.linecorp.bot.model.response.BotApiResponse;
 import com.linecorp.bot.spring.boot.annotation.EventMapping;
 import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;
+import com.protoss.linebot.entity.LineData;
 import com.protoss.linebot.flex.*;
 import com.protoss.linebot.helper.RichMenuHelper;
 import com.protoss.linebot.repository.LineDataRepository;
@@ -183,18 +184,18 @@ public class LineBotController {
         int listMinute = time.getMinute();
 
         if(listHour >= 6 && (listHour <= 17 && listMinute <= 60)){
+            LOGGER.info("{}",listHour);
 //        if(listHour >= 6 && (listHour <= 13 && listMinute <= 60)){
                 switch (text) {
-                    case "Flex": {
+                    case "Flex1234": {
                         String pathImageFlex = new ClassPathResource("richmenu/Newmenu_optimized.jpg").getFile().getAbsolutePath();
                         String pathConfigFlex = new ClassPathResource("richmenu/richmenu-flexs.yml").getFile().getAbsolutePath();
                         RichMenuHelper.createRichMenu(lineMessagingClient, pathConfigFlex, pathImageFlex, userId);
-//                lineMessagingClient.getProfile(userId)
-//                        .whenComplete((profile, throwable) -> {
-//                            LOGGER.info("Flex{}",usid);
-//                            usid = profile.getUserId();
-////                            lineDataRepository.save(new LineData(profile.getUserId()));
-//                        });
+                        LineData lineData = new LineData();
+                        lineData.setUserId(userId);
+                        lineData.setTableId("1234");
+                        lineData.setStatus("เข้าใช้งาน");
+                        lineDataRepository.save(lineData);
                         break;
                     }
                     case "เก็บตัง": {
@@ -202,7 +203,11 @@ public class LineBotController {
                         break;
                     }
                     case "เรียกพนักงาน": {
+                        LineData lineData = new LineData();
+                        lineData.setUserId(userId);
+                        lineData.setStatus("เรียกพนักงาน");
                         this.reply(replyToken, new RestaurantFlexMessageSupplier().get());
+                        lineDataRepository.save(lineData);
                         break;
                     }
                     case "หน้าหลัก": {

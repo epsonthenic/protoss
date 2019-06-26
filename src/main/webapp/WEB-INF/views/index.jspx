@@ -16,14 +16,12 @@
             <h5>Enter Code: </h5>
             <input style="width:30vh;margin-left: 20px" type="password" class="form-control" id="myPsw"
                    placeholder="1-4"/>
-            <!--<br/>-->
-
         </div>
         <div style="margin: 20px">
             <span id="pass" style="color: red;display: none"> รหัสผิด </span>
         </div>
         <div class="col-xs-12 text-center" style="margin-top: 20px">
-            <button type="submit" id="sendmessagebutton" class="btn btn-default">OK</button>
+            <button type="submit" id="sendmessagebutton" class="btn btn-default" >OK</button>
         </div>
         <!--</div>-->
     </div>
@@ -37,9 +35,17 @@
     <script>
         $('#sendmessagebutton').click(function () {
             if ($('#myPsw').val() == '1234') {
+                // $.ajax({
+                //     url: session.context + "/Dashboard/savebyTable",
+                //     contentType: "application/json;charset=UTF-8",
+                //     headers: {Accept: "application/json;charset=UTF-8"},
+                //     type: "POST",
+                //     data: $('#myPsw').val(),
+                //     async: false
+                // })
                 liff.sendMessages([{
                     type: 'text',
-                    text: "Flex"
+                    text: "Flex" +$('#myPsw').val(),
                 }
                 ]).then(function () {
                     window.alert("Message sent");
@@ -51,30 +57,17 @@
                 $('#pass').show();
             }
         });
-
-        // document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        //     liff.sendMessages([{
-        //         type: 'text',
-        //         text: "Flex"
+        // function savetable(){
+        //     if ($('#myPsw').val() == '1234') {
+        //         $.ajax({
+        //             url:"http://localhost:8083/RCD/Dashboard/savebyTable",
+        //             contentType: "application/json;charset=UTF-8",
+        //             headers: {Accept: "application/json;charset=UTF-8"},
+        //             type: "POST",
+        //             data: $('#myPsw').val(),
+        //             async: false
+        //         })
         //     }
-        //     ]).then(function () {
-        //         window.alert("Message sent");
-        //     }).catch(function (error) {
-        //         window.alert("Error sending message: " + error);
-        //     });
-        //     liff.closeWindow();
-        // });
+        // }
     </script>
-
-
-    <!--<script>-->
-    <!--function myFunction() {-->
-    <!--var x = document.getElementById("myPsw").value;-->
-    <!--if(x == 1234){-->
-    <!--document.getElementById("ind").innerHTML = x;-->
-    <!--}-->
-    <!--document.getElementById("demo").innerHTML = x;-->
-    <!--liff.closeWindow();-->
-    <!--}-->
-    <!--</script>-->
 </div>

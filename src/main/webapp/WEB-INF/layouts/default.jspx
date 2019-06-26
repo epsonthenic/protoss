@@ -12,7 +12,7 @@
     <util:load-scripts/>
 </head>
 <script> var session = {};
-session.context = 'http://localhost:8082/Bot';
+session.context = 'http://localhost:8083/RCD';
 </script>
 <body class="tundra spring">
 <tiles:insertAttribute name="header" ignore="true"/>

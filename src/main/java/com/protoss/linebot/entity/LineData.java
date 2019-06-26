@@ -22,5 +22,8 @@ public class LineData {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String userId;
+    private String tableId;
+    private String status;
+
 
 }
