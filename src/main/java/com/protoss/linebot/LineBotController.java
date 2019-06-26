@@ -195,6 +195,7 @@ public class LineBotController {
                         lineData.setUserId(userId);
                         lineData.setTableId("1234");
                         lineData.setStatus("เข้าใช้งาน");
+
                         lineDataRepository.save(lineData);
                         break;
                     }
