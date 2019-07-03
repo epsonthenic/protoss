@@ -71,8 +71,6 @@ public class LineBotController {
 
     private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    static int i;
-
     /////////////////////////////รับข้อความ////////////////////////////////
     @EventMapping
     public void handleTextMessage(MessageEvent<TextMessageContent> event) throws IOException, Exception, JRException {
@@ -183,7 +181,7 @@ public class LineBotController {
         int listHour = time.getHour();
         int listMinute = time.getMinute();
 
-        if(listHour >= 6 && (listHour <= 17 && listMinute <= 60)){
+        if(listHour >= 6 && (listHour <= 23 && listMinute <= 60)){
             LOGGER.info("{}",listHour);
 //        if(listHour >= 6 && (listHour <= 13 && listMinute <= 60)){
                 switch (text) {
@@ -218,11 +216,13 @@ public class LineBotController {
                     case "ดูคิว": {
                         LOGGER.info("UserId message{}", userId);
                         generateReport(userId);
-                        getJpgImge();
-                        Path tempFile = Application.downloadedContentDir.resolve("imgpdf" + i + "-0.jpg");
+                        getJpgImge(userId);
+//                        Path tempFile = Application.downloadedContentDir.resolve(userId + i + "-0.jpg");
+                        Path tempFile = Application.downloadedContentDir.resolve(userId + ".jpg");
                         DownloadedContent jpg = new DownloadedContent(tempFile, createUri("/downloaded/" + tempFile.getFileName()));
                         this.reply(replyToken, Arrays.asList(
-                                new ImageMessage(jpg.getUri(), jpg.getUri())
+                                new ImageMessage(jpg.getUri(), jpg.getUri()),
+                                new TextMessage(jpg.getUri())
                         ));
                         break;
                     }
@@ -290,8 +290,7 @@ public class LineBotController {
     private static DownloadedContent createTempFile(String ext) {
 //        String fileName = LocalDateTime.now() + "-" + UUID.randomUUID().toString() + "." + ext;
 
-        log.info("pdf{}", i);
-        Path tempFile = Application.downloadedContentDir.resolve("imgpdf" + i + "-0.jpg");
+        Path tempFile = Application.downloadedContentDir.resolve("imgpdf-0.jpg");
         tempFile.toFile().deleteOnExit();
 //        return new DownloadedContent(tempFile, createUri("/downloaded/" + tempFile.getFileName()));
         return new DownloadedContent(tempFile, createUri("/downloaded/" + tempFile.getFileName()));
@@ -331,6 +330,7 @@ public class LineBotController {
             ).get();
         } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
+//            asd
         }
     }
 
@@ -338,31 +338,26 @@ public class LineBotController {
         JasperReport jasperReport;
 //        JasperPrint jasperPrint;
         Resource resource = context.getResource("classpath:reports/car_list.jrxml");
-
         InputStream inputStream = resource.getInputStream();
         JasperReport report = JasperCompileManager.compileReport(inputStream);
-
         Map<String, Object> reportParameters = new HashMap<>();
-
         reportParameters.put(ReportParams.UI, userIdd);
-
         LOGGER.info("Add UserId:{}", userIdd);
-
         JasperPrint jasperPrint = JasperFillManager.fillReport(report, reportParameters, new JREmptyDataSource());
-
-        i++;
         JasperExportManager.exportReportToPdfStream(jasperPrint,
-                new FileOutputStream("src/main/resources/reports/car_list" + i + ".pdf")
+//                new FileOutputStream("src/main/resources/reports/car_list" + i + ".pdf")
+                new FileOutputStream("src/main/resources/reports/" + userIdd + ".pdf")
         );
     }
 
-    public void getJpgImge() throws Exception {
-        PDDocument document = PDDocument.load(new File("src/main/resources/reports/car_list" + i + ".pdf"));
+    public void getJpgImge(String userIdd) throws Exception {
+        PDDocument document = PDDocument.load(new File("src/main/resources/reports/" + userIdd+ ".pdf"));
         LOGGER.info("pdf: {}", document);
         PDFRenderer pdfRenderer = new PDFRenderer(document);
         for (int page = 0; page < document.getNumberOfPages(); ++page) {
             BufferedImage bim = pdfRenderer.renderImageWithDPI(page, 300, ImageType.RGB);
-            ImageIOUtil.writeImage(bim, String.format("src/main/resources/reports/imgpdf" + i) + "-" + page++ + "." + "jpg", 300);
+//            ImageIOUtil.writeImage(bim, String.format("src/main/resources/reports/"+userIdd + i) + "-" + page++ + "." + "jpg", 300);
+            ImageIOUtil.writeImage(bim, String.format("src/main/resources/reports/"+userIdd) + ".jpg", 300);
         }
         document.close();
 
